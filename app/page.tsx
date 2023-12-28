@@ -7,6 +7,8 @@ import { ProfileCategory } from '@/types/enum'
 
 const server = process.env.NEXT_PUBLIC_API_URL
 
+console.log(server)
+
 const getInternshipData = async () => {
   try {
       const { data } = await axios.get<InternshipDetailsWithProfiles>(`${server}/internship/6554367889b517b7ec08e404`)
