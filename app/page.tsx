@@ -5,9 +5,7 @@ import axios from 'axios'
 import Loading from '@/components/Loading'
 import { ProfileCategory } from '@/types/enum'
 
-const server = process.env.NEXT_PUBLIC_API_URL
-
-console.log(server)
+const server = "https://skr-portfolio-y430.onrender.com"
 
 const getInternshipData = async () => {
   try {
