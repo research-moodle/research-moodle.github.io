@@ -35,7 +35,7 @@ jobs:
         uses: SpicyPizza/create-envfile@v1
         with:
           envkey_NEXT_PUBLIC_API_URL: '${{ secrets.NEXT_PUBLIC_API_URL }}'
-          file_name: .env.local
+          file_name: .env
           directory: ./
       - name: Detect package manager
         id: detect-package-manager
