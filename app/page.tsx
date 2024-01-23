@@ -5,7 +5,7 @@ import axios from 'axios'
 import Loading from '@/components/Loading'
 import { ProfileCategory } from '@/types/enum'
 
-const server = "https://skr-portfolio-y430.onrender.com"
+const server = process.env.NEXT_PUBLIC_API_URL as string;
 
 const getInternshipData = async () => {
   try {
@@ -110,8 +110,8 @@ const Page = async () => {
                 <h3 className='text-xl lg:text-2xl font-medium mt-5'>Mentors</h3>
                 <InternshipProfilesSection title='' profiles={data.profiles.filter((i) => i.category === ProfileCategory.InternshipMentor)} />
                 <h3 className='text-xl lg:text-2xl font-medium mt-5'>Current student</h3>
-                <InternshipProfilesSection title='Tier 1 colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.CurrentStudent && i.collegeTier)} />
-                <InternshipProfilesSection title='Other colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.CurrentStudent && !i.collegeTier)} />
+                <InternshipProfilesSection title='Tier 1 colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.CurrentStudent && i.collegeTier).reverse()} />
+                <InternshipProfilesSection title='Other colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.CurrentStudent && !i.collegeTier).reverse()} />
                 <h3 className='text-xl lg:text-2xl font-medium mt-5'>Previous student</h3>
                 <InternshipProfilesSection title='Tier 1 colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.PreviousStudent && i.collegeTier)} />
                 <InternshipProfilesSection title='Other colleges' profiles={data.profiles.filter((i) => i.category === ProfileCategory.PreviousStudent && !i.collegeTier)} />
