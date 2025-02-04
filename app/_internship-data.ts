@@ -106,7 +106,7 @@ export const data: InternshipDetailsWithProfiles = {
     {
       _id: "5",
       name: "Swagatam Das",
-      linkedIn: "https://scholar.google.com/citations?user=j5K7HPoAAAAJ&hl=en",
+      linkedIn: "https://www.linkedin.com/in/swagatam-das-b26a186?originalSubdomain=in",
       category: ProfileCategory.InternshipMentor,
       college: null,
       collegeTier: null,
